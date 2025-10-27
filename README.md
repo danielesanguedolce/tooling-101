@@ -13,3 +13,7 @@ cd python
 cd c
 gcc -O2 -Wall -Wextra -o sum sum.c
 ./sum 1 2 3.5
+
+## Prossimi passi
+- Giornata 3: Git avanzato e debug
+- Aggiungere test automatici per python e C
