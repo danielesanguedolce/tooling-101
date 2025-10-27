@@ -17,3 +17,4 @@ gcc -O2 -Wall -Wextra -o sum sum.c
 ## Prossimi passi
 - Giornata 3: Git avanzato e debug
 - Aggiungere test automatici per python e C
+# Note: housekeeping
