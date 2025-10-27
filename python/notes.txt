@@ -1,1 +1,3 @@
 Studiare shell e git
+imparare shell e git
+studiare C ogni giorno
