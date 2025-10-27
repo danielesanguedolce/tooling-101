@@ -1,0 +1,4 @@
+error: disk full
+info: nothing to do
+warning: low battery
+error: timeout
