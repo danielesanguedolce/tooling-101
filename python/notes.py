@@ -25,8 +25,24 @@ def delete(idx: int):
     else:
         print("Indice non valido")
 
+def search(pat: str):
+    if not DB.exists():
+        print("(nessuna nota)"); return
+    pat = pat.lower()
+    found = False
+    for i, line in enumerate(DB.read_text(encoding="utf-8").splitlines(), 1):
+        if pat in line.lower():
+            print(f"{i}. {line}")
+            found = True
+    if not found:
+        print("(nessun risultato)")
+
 def help():
-    print("Uso:\n  notes.py add \"testo\"\n  notes.py list\n  notes.py del <indice>")
+    print("Uso:")
+    print('  notes.py add "testo"')
+    print("  notes.py list")
+    print("  notes.py del <indice>")
+    print("  notes.py search <pattern>")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2: help(); sys.exit(1)
@@ -39,5 +55,8 @@ if __name__ == "__main__":
     elif cmd == "del":
         if len(sys.argv) != 3 or not sys.argv[2].isdigit(): help(); sys.exit(1)
         delete(int(sys.argv[2]))
+    elif cmd == "search":
+        if len(sys.argv) != 3: help(); sys.exit(1)
+        search(sys.argv[2])
     else:
         help()
