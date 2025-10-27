@@ -2,3 +2,16 @@ __pycache__/
 *.pyc
 .build/
 dist/
+
+# Generated / lab artifacts
+shell/*.log
+shell/*.tar.gz
+shell/headers.txt
+shell/gt50.txt
+shell/numbers.log
+shell/only_errors.txt
+shell/out.txt
+shell/quotes*.txt
+shell/scores*.txt
+c/sum
+python/notes.txt
